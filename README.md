@@ -23,10 +23,11 @@ ___
 3. Clear out the generated code from the `App` component.
 4. Draw a component diagram.
 5. Write the static versions of your components.
-6. Import and nest components so you have your start screen built for the app. (See the **Starter Data** section below for a list of ingredients.)
-7. Decide what the state should be.
-8. Decide where the state should live.
-9. Write the handler callbacks that you pass into children to update state.
+6. Import and nest components so you have your start screen built for the app.
+(See the **Starter Data** section below for a list of ingredients.)
+8. Decide what the state should be.
+9. Decide where the state should live.
+10. Write the handler callbacks that you pass into children to update state.
 
 ### Sample Idea for Component Hierarchy:
 
