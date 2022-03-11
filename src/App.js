@@ -9,13 +9,18 @@ class App extends Component {
     burgerIngredients: []
   }
 
+  clearBurger = () => {
+    this.setState({burgerIngredients: []})
+  }
+
   addToBurger = (ingredient) => {
     // add the selected ingredient to the burgerIngredients state
     // this.setState((prevState, props)=>{
     //   return {burgerIngredients: [...prevState.burgerIngredients, {name, color}]}
     // })
+    console.log('HUYUUUUUU')
     let newBurgerList = this.state.burgerIngredients
-    newBurgerList.push(ingredient)
+    newBurgerList.unshift(ingredient)
     this.setState({burgerIngredients: newBurgerList})
   }
 
@@ -28,7 +33,10 @@ class App extends Component {
             ingredients={this.props.ingredientsList} 
             addToBurger={this.addToBurger}
           />
-          <BurgerPane />
+          <BurgerPane 
+            burgerIngredients={this.state.burgerIngredients}
+            clearBurger={this.clearBurger}
+          />
         </main>
       </>
     )

@@ -5,7 +5,7 @@ import Ingredient from './Ingredient';
 class Clear extends Component {
   render() {
     return (
-        <button>Start Over</button>
+        <button onClick={this.props.clearBurger}>Start Over</button>
     )
   }
 }

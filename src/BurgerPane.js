@@ -4,10 +4,14 @@ import Clear from './Clear'
 
 class BurgerPane extends Component {
   render() {
+    const burger = this.props.burgerIngredients.map(layer=>{
+      return <Ingredient ingredient={layer} />
+    })
     return (
         <section className="burger-pane">
             <h1>Burger Pane</h1>
-            <Clear />
+            {burger}
+            <Clear clearBurger={this.props.clearBurger} />
         </section>
     )
   }
